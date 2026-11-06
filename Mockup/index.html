@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0a1020" />
+  <title>UniPilot — your next step, made clearer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="rail">
+      <a class="brand" href="#home" aria-label="UniPilot home"><span class="brand-mark">✦</span><span>uni<span class="brand-accent">pilot</span><small>ACADEMIC COMPASS</small></span></a>
+      <div class="rail-label">WORKSPACE</div>
+      <nav class="side-nav" aria-label="Main navigation">
+        <button class="nav-item active" data-page="home"><span>⌂</span>Overview</button>
+        <button class="nav-item" data-page="courses"><span>▤</span>Course explorer</button>
+        <button class="nav-item" data-page="advisor"><span>✧</span>AI advisor <i class="new-dot"></i></button>
+        <button class="nav-item" data-page="planner"><span>▦</span>Semester planner</button>
+        <button class="nav-item" data-page="exam"><span>◷</span>Exam coach</button>
+      </nav>
+      <div class="rail-bottom"><div class="help-card"><img class="mascot-help" src="emile.webp" alt="Emile, your UniPilot study companion"><span class="help-icon">✦</span><strong>A little clarity goes a long way.</strong><p>Your plan is yours. UniPilot helps you explore the options.</p></div><div class="profile"><div class="avatar">EM</div><div><b>Emile</b><small>Computer Science</small></div><span class="more">···</span></div></div>
+    </aside>
+    <main class="main-area">
+      <header class="topbar"><div class="crumb"><span>My workspace</span><b>/</b><strong id="crumb-name">Overview</strong></div><div class="top-actions"><span class="term-pill"><i></i> Spring 2026</span><button class="icon-button" aria-label="Notifications">♧<i class="notification"></i></button><div class="avatar small">EM</div></div></header>
+      <div class="content">
+        <section class="page active" id="page-home">
+          <div class="welcome-row"><div><div class="eyebrow">THURSDAY, 12 FEBRUARY 2026 <span class="eyebrow-line"></span></div><h1>Good morning, Emile <span class="wave">✋</span></h1><p class="subtitle">Your degree, your direction. Here’s where you’re headed.</p></div><button class="outline-button" data-goto="advisor"><span>✧</span> Tune my recommendations</button></div>
+          <div class="stat-grid"><article class="stat-card"><div class="stat-head">DEGREE PROGRESS<span class="stat-icon blue">◫</span></div><div class="stat-value">78<span class="unit">%</span></div><div class="progress"><i style="width:78%"></i></div><div class="stat-foot">28 of 36 courses complete <span>+2 this year</span></div></article><article class="stat-card"><div class="stat-head">CURRENT GPA<span class="stat-icon violet">↗</span></div><div class="stat-value">7.42<span class="unit">/10</span></div><div class="stat-foot"><span class="positive">↑ 0.24</span> compared to last year</div><div class="sparkline"><i style="height:28%"></i><i style="height:42%"></i><i style="height:35%"></i><i style="height:58%"></i><i style="height:50%"></i><i style="height:71%"></i><i style="height:64%"></i><i style="height:88%"></i></div></article><article class="stat-card"><div class="stat-head">NEXT EXAM<span class="stat-icon amber">◷</span></div><div class="stat-value date-value">Networks<span class="unit">in 12 days</span></div><div class="stat-foot">Computer Networks · 24 Feb <button class="text-button" data-goto="exam">Check readiness →</button></div></article></div>
+          <div class="hero-grid"><article class="insight-card"><div class="hero-top"><div><div class="eyebrow mint">✦ YOUR NEXT DIRECTION</div><h2>Cybersecurity is looking like <em>your kind of challenge.</em></h2></div><img class="mascot-hero" src="emile.webp" alt="Emile cheering you on"></div><p>Your strong results in Networks and Systems, plus your interest in protecting people’s data, point to a promising fit.</p><div class="tag-row"><span>Strong foundations</span><span>Matches your interests</span><span>91% fit</span></div><button class="primary-button" data-goto="advisor">See why it fits <span>→</span></button></article><article class="next-card"><div class="card-heading"><div><div class="eyebrow">YOUR SEMESTER</div><h3>Spring 2026 plan</h3></div><button class="more-button" aria-label="More options">···</button></div><div class="course-mini"><span class="course-symbol indigo">DB</span><div><b>Database Systems</b><small>6 ECTS · Mon, 10:00</small></div><span class="checkmark">✓</span></div><div class="course-mini"><span class="course-symbol teal">CN</span><div><b>Computer Networks</b><small>5 ECTS · Wed, 12:00</small></div><span class="checkmark">✓</span></div><button class="secondary-button full" data-goto="planner">Open semester planner <span>→</span></button></article></div>
+          <div class="section-heading"><div><div class="eyebrow">A GOOD PLACE TO START</div><h2>Made for your next move</h2></div><button class="text-button" data-goto="courses">Explore all courses →</button></div>
+          <div class="recommend-grid" id="home-recommendations"></div>
+          <div class="exam-banner"><div class="exam-banner-icon">◷</div><div><div class="eyebrow amber-text">EXAM COACH · 12 DAYS TO GO</div><h3>Know what to focus on before Networks.</h3><p>Take a quick check-in and get a study plan shaped around what you already know.</p></div><button class="primary-button amber-button" data-goto="exam">Build my study plan <span>→</span></button></div>
+        </section>
+
+        <section class="page" id="page-courses">
+          <div class="eyebrow">YOUR DEGREE, EXPLORED</div><h1>Course explorer</h1><p class="subtitle">Find the courses that fit where you want to go.</p>
+          <div class="filter-bar"><label class="search-box"><span>⌕</span><input id="course-search" placeholder="Search courses or skills..." /></label><select id="interest-filter" aria-label="Filter by career path"><option value="all">All pathways</option><option value="security">Cybersecurity</option><option value="software">Software development</option><option value="data">Data & AI</option></select><select id="level-filter" aria-label="Filter by difficulty"><option value="all">Any difficulty</option><option>Beginner</option><option>Intermediate</option><option>Advanced</option></select></div>
+          <div class="results-label"><span id="course-count">6 courses</span><span>Sorted by your fit <span class="sort-icon">↓</span></span></div><div class="course-list" id="course-list"></div>
+        </section>
+
+        <section class="page" id="page-advisor">
+          <div class="eyebrow">A PLAN THAT STARTS WITH YOU</div><h1>AI academic advisor</h1><p class="subtitle">Tell us what you’re curious about. We’ll connect it to your strengths and course options.</p>
+          <div class="advisor-layout"><div class="advisor-form card"><div class="form-step"><span>01</span><div><h3>Where do you want to go?</h3><p>Choose the paths you’d like to explore.</p></div></div><div class="path-options"><button class="path-option selected" data-path="security"><span class="path-icon violet-bg">⌑</span><span><b>Cybersecurity</b><small>Protect systems, data & people</small></span><span class="radio"></span></button><button class="path-option" data-path="software"><span class="path-icon blue-bg">⌘</span><span><b>Software development</b><small>Build products people love</small></span><span class="radio"></span></button><button class="path-option" data-path="data"><span class="path-icon amber-bg">◌</span><span><b>Data & AI</b><small>Find patterns and create insight</small></span><span class="radio"></span></button></div><div class="form-divider"></div><div class="form-step"><span>02</span><div><h3>What kind of work energizes you?</h3><p>Pick as many as you like.</p></div></div><div class="chip-select"><button class="choice-chip selected">Solving puzzles</button><button class="choice-chip">Building things</button><button class="choice-chip selected">Understanding systems</button><button class="choice-chip">Working with data</button><button class="choice-chip">Helping people</button></div><div class="form-divider"></div><div class="form-step"><span>03</span><div><h3>Use your academic strengths</h3><p>We’ll compare your completed courses and grades.</p></div></div><label class="toggle-row"><span><b>Include my course performance</b><small>Uses your strongest subjects to shape the match.</small></span><input type="checkbox" id="use-grades" checked><i class="toggle"></i></label><button id="generate-recs" class="primary-button full generate-button">Update my recommendations <span>✦</span></button></div>
+          <div class="advisor-results"><div class="result-intro"><div class="eyebrow mint">✦ YOUR PERSONALIZED MATCHES</div><h2>Paths that fit you</h2><p>Based on your interests, strengths, and the courses you’ve enjoyed.</p></div><div id="advisor-recommendations"></div><div class="privacy-note">ⓘ <span>Your profile stays in your control. Recommendations are a starting point, not a decision.</span></div></div></div>
+        </section>
+
+        <section class="page" id="page-planner">
+          <div class="eyebrow">MAKE ROOM FOR WHAT’S NEXT</div><h1>Semester planner</h1><p class="subtitle">A balanced plan gives you space to learn and space to breathe.</p><div class="planner-summary"><div><div class="eyebrow">SPRING SEMESTER 2026</div><h2 id="planner-total">11 ECTS planned</h2><p>Suggested range: 24–30 ECTS · Add courses to shape your plan.</p></div><div class="planner-ring"><strong id="planner-count">2</strong><span>courses</span></div></div><div class="planner-columns"><div><div class="section-heading compact"><h2>My selected courses</h2><span class="muted">This semester</span></div><div class="planner-selected" id="planner-selected"></div></div><div><div class="section-heading compact"><h2>Suggested next</h2><button class="text-button" data-goto="courses">Browse →</button></div><div id="planner-suggestions"></div></div></div>
+        </section>
+
+        <section class="page" id="page-exam">
+          <div class="eyebrow">PREP WITH A LITTLE MORE PURPOSE</div><h1>Exam coach</h1><p class="subtitle">A short check-in helps you spend study time where it matters most.</p><div class="exam-layout"><div class="exam-main card"><div class="exam-course-head"><div><span class="exam-label">UP NEXT · 24 FEBRUARY</span><h2>Computer Networks</h2><p>5 ECTS <span>·</span> 12 days to go <span>·</span> Dr. N. Papadopoulos</p></div><span class="course-symbol teal large">CN</span></div><div class="exam-progress-row"><span>Readiness check</span><span id="quiz-progress">Not started</span></div><div class="progress exam-progress"><i id="quiz-bar" style="width:0%"></i></div><div id="quiz-container"></div></div><aside class="exam-side"><div class="study-card"><div class="eyebrow amber-text">YOUR STUDY SNAPSHOT</div><h3>Study smarter, not longer.</h3><p>UniPilot checks what you know, then highlights the topics worth another look.</p><div class="study-points"><div><span>01</span> Spot your knowledge gaps</div><div><span>02</span> Review the right concepts</div><div><span>03</span> Feel ready for exam day</div></div></div><div class="exam-tip"><img src="emile.webp" alt="Emile the study companion"><p><b>Emile’s study tip</b><br>Try 25 minutes on one topic, then take a short break.</p></div></aside></div>
+        </section>
+      </div>
+      <footer class="footer"><span>✦ UniPilot <span class="footer-muted">· Your academic compass</span></span><span>Demo profile · Your data stays yours</span></footer>
+    </main>
+  </div>
+  <div class="toast" id="toast" role="status"></div>
+  <div class="modal-backdrop" id="course-modal"><div class="course-modal card"><button class="modal-close" aria-label="Close">×</button><div id="modal-content"></div></div></div>
+  <nav class="mobile-nav" aria-label="Mobile navigation"><button class="active" data-page="home"><span>⌂</span>Home</button><button data-page="courses"><span>▤</span>Courses</button><button data-page="advisor"><span>✧</span>Advisor</button><button data-page="planner"><span>▦</span>Planner</button><button data-page="exam"><span>◷</span>Exam</button></nav>
+  <script src="app.js"></script>
+</body>
+</html>
